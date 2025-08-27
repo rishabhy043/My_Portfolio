@@ -1,0 +1,117 @@
+.education {
+    width: 100%;
+    padding: 4rem 2rem;
+    background: rgb(30, 30, 30);
+    color: #fff;
+    text-align: center;
+}
+
+.education-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: yellow;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 2rem;
+    max-width: 800px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: yellow;
+}
+
+.timeline-item {
+    display: flex;
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    background: yellow;
+    border-radius: 50%;
+    border: 3px solid black;
+    z-index: 1;
+}
+
+.timeline-content {
+    margin-left: 3rem;
+    padding: 1rem 1.5rem;
+    background: #111;
+    border-left: 4px solid yellow;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 0, 0.4);
+}
+
+.timeline-content h3 {
+    font-size: 1.4rem;
+    color: yellow;
+}
+
+.timeline-content h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0.3rem 0;
+}
+
+.college {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.year {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: yellow;
+}
+
+.desc {
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .education {
+        padding: 2rem 1rem;
+    }
+
+    .education-title {
+        font-size: 2rem;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-dot {
+        left: 2px;
+    }
+
+    .timeline-content {
+        margin-left: 2.5rem;
+        padding: 1rem;
+    }
+}
