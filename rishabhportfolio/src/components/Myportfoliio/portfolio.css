@@ -1,0 +1,114 @@
+/* Portfolio Section */
+.works {
+    width: 100%;
+    max-width: 75rem;
+    margin: 4rem auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Heading */
+.works h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 1rem;
+    position: relative;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.works h3:hover {
+    color: #f1c40f;
+    transform: scale(1.05);
+}
+
+.works h3::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #000, #f1c40f);
+    margin: 0.7rem auto 0;
+    border-radius: 2px;
+}
+
+/* Description */
+.aboutwroks {
+    font-size: 1.3rem;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 1rem auto 2.5rem;
+    line-height: 1.8;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.aboutwroks:hover {
+    color: #a59658;
+    transform: scale(1.02);
+}
+
+
+.workimages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* exactly 3 images per row */
+    gap: 1.8rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.workimages img {
+    width: 100%;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+.workimages img:hover {
+    transform: scale(1.05) rotateY(6deg);
+    box-shadow: 0 20px 40px rgba(241, 196, 15, 0.4);
+}
+
+/* Responsive - for small screens */
+@media (max-width: 900px) {
+    .workimages {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 per row on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .workimages {
+        grid-template-columns: 1fr;
+        /* 1 per row on mobile */
+    }
+}
+
+/* Optional button (if you re-enable it) */
+.seemorebtn {
+    margin-top: 2.5rem;
+    padding: 0.9rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    background: linear-gradient(90deg, #f1c40f, #ffd84d);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.seemorebtn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
